@@ -56,7 +56,7 @@
 
     <!-- Grid Section -->
     <div class="grid">
-        <div class="grid-item" onclick="openModal('Costillas de Cerdo', 'Jugosas costillas con un toque ahumado.', 'S/40.00')">
+        <div class="grid-item" onclick="openModal('Parrilla Mixta', 'seasasa.', 'S/40.00')">
             <img src="primero.jpg" alt="Image 1">
             <p><strong>Parrillada Mixta</strong></p>
             <p class="price">
@@ -65,7 +65,7 @@
             </p>
             <p>Una combinación perfecta de carnes a la parrilla: pollo, cerdo y res, acompañados de papas y ensaladas frescas.</p>
         </div>
-        <div class="grid-item">
+        <div class="grid-item " onclick="openModal('Costillas de Cerdo', 'Jugosas costillas con un toque ahumado.', 'S/48.00')">
             <img src="segundo.jpg" alt="Image 2">
             <p><strong>Costillas de Cerdo</strong></p>
             <p class="price">
@@ -144,18 +144,19 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modal-title"></h2>
             <div class="modal-body">
-                <img id="modal-image" src="primero.jpg" alt="Plato" /> 
+                <img id="modal-image" src="" alt="Imagen del plato">
                 <div class="modal-details">
                     <p id="modal-description"></p>
-                    <p>Precio: S/ <span id="modal-price"></span></p>
+                    <p id="modal-price"></p>
                     <label for="quantity">Cantidad:</label>
                     <input type="number" id="quantity" value="1" min="1">
                 </div>
-            </div><br>
-            <button class="buy-button" onclick="addToCart()">Añadir al Carrito</button>
+            </div>
+            <button class="buy-button" onclick="addToCart()">Añadir al carrito</button>
         </div>
-    </div>
-    <!-- Carrito flotante -->
+    </div>  
+    
+<!-- Carrito flotante -->
 <div class="cart-sidebar" id="cartSidebar">
     <button class="close-cart-button" onclick="closeCart()">X</button>
     <h3>Carrito de Compras</h3>
@@ -165,11 +166,16 @@
     <button class="checkout-button">Finalizar compra</button>
 </div>
 
-<!-- Botón flotante para abrir el carrito -->
-<div class="cart-icon" onclick="openCart()">
-    🛒
+<div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <h3>Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()" class="checkout-button">Finalizar Compra</button>
 </div>
 <button id="btnTop">↑</button>
 </body>
 <script src="java.js"></script>
 </html>
+
