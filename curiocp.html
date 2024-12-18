@@ -48,24 +48,35 @@
     </header>
 
     <section class="founders-section">
-        <div class="founder-card">
+        <div class="founder-card" onclick="openFounderModal('jhefer meneses','Cofundador de nuestra empresa, amante de las parrillas y experto en atención al cliente.', ['instagram', 'facebook', 'tiktok', 'twitter'])">
             <img src="jhefer.jpg" alt="Fundador 1" class="founder-image">
             <h2>feromonas meneses</h2>
             <p>El maestro detrás de la parrilla, con más de 15 años de experiencia en asados y una pasión por crear momentos inolvidables.</p>
         </div>
 
-        <div class="founder-card">
+        <div class="founder-card" onclick="openFounderModal('Jorge granados pisfil','Cofundador de nuestra empresa, amante de las parrillas y experto en atención al cliente.',['instagram', 'facebook', 'tiktok', 'twitter'])">
             <img src="jorge.png" alt="Fundador 2" class="founder-image">
             <h2>jorge granados pisfil</h2>
             <p>Especialista en atención al cliente, María asegura que cada experiencia en el restaurante sea única y especial.</p>
         </div>
 
-        <div class="founder-card">
+        <div class="founder-card" onclick="openFounderModal('Martin Rendón','Cofundador de nuestra empresa, amante de las parrillas y experto en atención al cliente.', ['instagram', 'facebook', 'tiktok', 'twitter'])">
             <img src="martin.jpg" alt="Fundador 3" class="founder-image">
             <h2>Martin rendon</h2>
             <p>El visionario detrás de la expansión del restaurante, siempre buscando nuevas formas de innovar en el mundo parrillero.</p>
         </div>
     </section>
+    <!-- Modal -->
+    <div id="founder-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFounderModal()">&times;</span>
+            <h2 id="founder-name"></h2>
+            <p id="founder-description"></p>
+            <div id="iconos2" class="iconos"></div>
+           
+        </div>
+    </div>
+    
 
     <footer class="footer">
         <p>© 2024 Restaurante Parrillero. Todos los derechos reservados.</p>
@@ -75,5 +86,5 @@
     
 
 </body>
-<script src="java.js"></script>
+<script src="scriptdefundadores.js"></script>
 </html>
