@@ -19,4 +19,4 @@ function openFounderModal(name, description, socials) {
 
 function closeFounderModal() {
     document.getElementById("founder-modal").style.display = "none";
-}
+}   
