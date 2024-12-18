@@ -7,7 +7,25 @@ body {
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
     color: #F5F5F5;
+    animation: fadeInDown 1s ease-in-out;
 }
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(128, 64, 32, 0.8);
+    color: white;
+}
+
 .highlight {
     color: #D35400; /* Naranja quemado, para resaltar */
     font-weight: bold; /* Hacer el nombre más destacado */
@@ -188,14 +206,12 @@ body {
 
 .modal-body {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Estructura vertical */
+    align-items: center; /* Alinear todos los elementos al centro */
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-.modal-body img {
-    max-width: 40%;
-    border-radius: 8px;
-}
+
 
 .modal-details {
     flex: 1;
