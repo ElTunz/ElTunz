@@ -11,6 +11,17 @@ body {
     background: rgba(65, 48, 46, 0.1); 
     background-size: cover;
     color: #333;
+    animation: fadeInDown 1s ease-in-out;
+}
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Navbar */
